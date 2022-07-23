@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SignUp/LogIn</title>
+  
+     <!-- <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>-->
+      <script src="/resources/js/firebasejs/9.1.3/firebase-app-compat.js"></script>
+      <script src="/resources/js/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+       <!-- initialize the SDK after all desired features are loaded -->
+  <script >
+        const firebaseConfig = {
+ apiKey: "AIzaSyA2KD1q0L0Kd4CWGlaBWmtrpGOYqjgbGoM",
+ authDomain: "amalitech-node-project.firebaseapp.com",
+ projectId: "amalitech-node-project",
+ storageBucket: "amalitech-node-project.appspot.com",
+ messagingSenderId: "409195901017",
+ appId: "1:409195901017:web:c34d1f9d71ef933945c148"
+};
+firebase.initializeApp(firebaseConfig);
+      </script>
+    <!--  <script 
+       src="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" 
+    href="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth.css" />-->
+    <script 
+    src="/resources/js/firebasejs/ui/5.0.0/firebase-ui-auth.js"></script>
+ <link type="text/css" rel="stylesheet" 
+ href="/resources/css/firebasejs/ui/5.0.0/firebase-ui-auth.css" />
+    <script defer type="text/javascript">
+    
+      // FirebaseUI config.
+      var uiConfig = {
+        
+        signInSuccessUrl: 'index.html',
+        signInOptions: [{
+          
+       
+         provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+         requireDisplayName: true,
+        
+        }],
+        // tosUrl and privacyPolicyUrl accept either url string or a callback
+        // function.
+        // Terms of service url/callback.
+        tosUrl: 'index.html',
+        // Privacy policy url/callback.
+        privacyPolicyUrl: function() {
+          window.location.assign('index.html');
+        }
+      };
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+  </head>
+  <body>
+  
+    <div style="text-align: center;">
+          <h1>Access Key Login</h1>
+</div>
+    <div id="firebaseui-auth-container"></div>
+  </body>
+</html>
