@@ -24,7 +24,7 @@ School IT Personnel
 3. Should be able to see all keys generated on the platform and see the status, date of
 4. procurement and expiry date.
 5. Should be able to access an endpoint, such that if the school email is provided, the endpoint should return status code 200 and details of the active key if any is found, else it should return 404. This is to enable them to integrate their school software with your key manager
-    * send a post request with body json body - {"email":"your meali adress"}  
+    * send a post request with body json body - {"email":"some email address"}  
     * send a post resquest with body `email=YourEmailAddress` (application/x-www-form-urlencoded)
 
 #### Endpoint
