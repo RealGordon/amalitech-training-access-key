@@ -1,0 +1,20 @@
+{
+  "name": "access-key-app",
+  "description": "Key Manager App",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Gordon Amamoo",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^5.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.14.2"
+  }
+}
